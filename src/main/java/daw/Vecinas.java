@@ -18,7 +18,7 @@ public class Vecinas {
         int[][] vecinas = new int[5][5];
         rellenarMatriz(vecinas);
         mostrarMatriz(vecinas);
-        System.out.println("\n" + mostrarVecinas(vecinas, 0, 0));
+        System.out.print("\n" + mostrarVecinas(vecinas, 4, 1));
     }
 
     private static void rellenarMatriz(int[][] matrix) {
@@ -43,6 +43,8 @@ public class Vecinas {
     private static ArrayList<Integer> mostrarVecinas(int[][] matrix,
             int fila, int columna) {
         ArrayList<Integer> vecinas = new ArrayList<>();
+        System.out.println("");
+        System.out.print("\nNúmero elegido [" + matrix[fila][columna] + "]");
         for (int i = (fila - 1); i <= (fila + 1); i++) {
             if (!(i < 0 || (i >= matrix.length))) {
                 for (int j = (columna - 1); j <= (columna + 1); j++) {
